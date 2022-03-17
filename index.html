@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Monobot</title>
+    <style>
+      body {
+        background-color: #2e2e2e;
+      }
+      .heading {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 35px;
+        color: #f3f3f3;
+        text-align: left;
+      }
+      .list {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 28px;
+        color: #e0e0e0;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1024 height=576 style="width: 1024px; height: 576px; background: #252525"></canvas>
+    <h1 class="heading" style="font-size: 40px; text-align: center">
+      Changelog
+    </h1>
+
+    <h1 class="heading">v0.9.0 - 3/17/22</h1>
+    <ul class="list">
+      <li><i>
+        ANOUNCEMENT - The game has been cut short, mostly due to my lack of interest. The game will almost certainly receive no more updates, and will hopefully be submitted to CoolMathGames within the next few days. A huge thank you to everyone who has played!
+      </li></i>
+      <li>zerotalent made new music for the game, which has been implemented. Thank you so much for making the music!</li>
+      <li>Added zerotalent to credits</li>
+      <li>Added Credit Button to main menu</li>
+      <li>In speedrun menu, Dev% time text now displays correctly</li>
+      <li>There should be no more issues with speedrun mode (bold claim)</li>
+      <li>Level 11-12 have been scrapped</li>
+      <li>Level select has been re-arranged to accomadate</li>
+      <li>Shift now is slide again, tutorial text changed again</li>
+    </ul>
+
+    <h1 class="heading">v0.8.6 - 3/11/22</h1>
+    <ul class="list">
+      <li>Can close speedrun menu by clicking outside of it</li>
+      <li>Toggling the Show Speed button no longer crashes the game</li>
+      <li>Rebound Dash to Shift, slide is now only pressing down. Changed some tutorial text to match this change</li>
+      <li>When doing an star/dev% speedrun it tells you the time you need to beat</li>
+    </ul>
+
+    <h1 class="heading">v0.8.5 - 3/5/22</h1>
+    <ul class="list">
+      <li>Added distance markers in the practice level</li>
+      <li>Added goal at 100m in the practice level</li>
+      <li>Can no longer turn on debug mode in speedruns</li>
+      <li>Changed Menu Speedrun button to say "Dev%" instead of "100%"</li>
+      <li>Made speedrun menu best time text say "No time recorded" when there is no time recorded</li>
+      <li>Made UI for the end of a speedrun</li>
+      <li>Speedrun time no longer persists between runs</li>
+      <li>Locked levels actually correctly lock now</li>
+    </ul>
+
+    <h1 class="heading">v0.8.4 - 2/19/22</h1>
+    <ul class="list">
+      <li><i>
+        ANOUNCEMENT - I will be participating in a game jam from Feb 20th-27th,
+        expect no updates between those dates
+      </li></i>
+      <li>Made speedrun menu not look as terrible as it was</li>
+      <li>Made % sign sprite for buttons</li>
+      <li>Added time text to speedrun category buttons</li>
+      <li>Added speedrun timer lable text</li>
+      <li>Added level lable text</li>
+      <li>Fixed how buttons looked when non-interactable in menu</li>
+    </ul>
+
+    <h1 class="heading">v0.8.3 - 2/19/22</h1>
+    <ul class="list">
+      <li>Changed level 10 and level 10 dev time again, times reset again</li>
+      <li>Changed level 6 and level 6 dev time, personal times reset</li>
+      <li>Added half-tile wall spikes</li>
+      <li>
+        Speedrun mode has been implemented, albeit not very well (Also, Times
+        will be reset any time levels are changed or new ones are added, dont
+        get too attached to your times for now)
+      </li>
+      <li>
+        Speedrun mode has been added to main menu (Once you beat all required
+        levels, currently 1-10)
+      </li>
+      <li>Resized options button in main menu</li>
+      <li>Added very much work-in-progress dash, accessible in Level 11</li>
+      <li>
+        A few levels besides the ones mentioned have been modifed slightly, not
+        enough to reset times
+      </li>
+    </ul>
+
+    <h1 class="heading">v0.8.2 - 2/17/22</h1>
+    <ul class="list">
+      <li>Added Changelog</li>
+      <li>When using rainbow theme scene transitions no longer flash white</li>
+      <li>
+        Rainbow theme is slightly more vibrant, but cycles slightly slower
+      </li>
+      <li>Fixed level 3 and 4 dev times</li>
+      <li>Level 9 is Completable again</li>
+      <li>
+        Can no longer submit times if debug mode was turned on in scene until
+        you reload the scene
+      </li>
+      <li>
+        Level 10 has been reworked somewhat (Yes, your time on level 10 will be
+        reset)
+      </li>
+      <li>Added Star and Dev time for level 10</li>
+      <li>When beating a level it now tells you if you beat star/dev time</li>
+      <li>
+        Can now load into a practice level by pressing P on the level select
+        screen
+      </li>
+      <li>Can no longer pause during scene transitions</li>
+      <li>
+        Added Framework for speedrun mode, no way to access in game as of now
+      </li>
+    </ul>
+    <script src="Build/ad5fa23126fbe325a0889dccb40e3345.js"></script>
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/1d7f56b7a8a70e714e761733246158e7.data",
+        frameworkUrl: "Build/b6cdfb021f2c8ef4916d34fe5a5dbf56.js",
+        codeUrl: "Build/eab7350f2334e1427ac94808eefdcc54.wasm",
+        symbolsUrl: "Build/a0949957fb8e430330020c500550431c.json",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "platformer",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
